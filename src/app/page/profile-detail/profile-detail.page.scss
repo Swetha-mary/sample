@@ -1,0 +1,38 @@
+.profile-container {
+  padding-top: 13px;
+
+  .profile-name {
+    font-size: 18px;
+    font-family: sans-serif;
+    font-weight: 600;
+    color: black;
+  }
+
+  .profile-detail {
+    font-size: 13px;
+  }
+
+  .profile-action {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .profile-actions {
+    align-items: center;
+  }
+}
+
+.container {
+  overflow: auto !important;
+}
+
+.profile-yes {
+  --background: #ff6c00;
+}
+
+
+.profile-no {
+  --background: white;
+  color: black;
+}

@@ -1,0 +1,28 @@
+.profile-header {
+  padding: 0;
+}
+
+.profile-container {
+  padding-top: 13px;
+
+  .profile-name {
+    font-size: 18px;
+    font-family: sans-serif;
+    font-weight: 600;
+    color: black;
+  }
+
+  .profile-detail {
+    font-size: 13px;
+  }
+
+  .profile-yes {
+    --background: #ff6c00;
+  }
+
+
+  .profile-no {
+    --background: white;
+    color: black;
+  }
+}

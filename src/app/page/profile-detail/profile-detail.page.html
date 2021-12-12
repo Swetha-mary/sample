@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>profile-detail</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-row class="container">
+  <ion-card *ngFor="let profile of profileDetail">
+    <ion-card-header>
+      <ion-row>
+        <ion-slides pager="true">
+          <ion-slide>
+            <ion-img [src]="profile.image" alt=”slide-1”></ion-img>
+          </ion-slide>
+        </ion-slides>
+      </ion-row>
+    </ion-card-header>
+    <ion-card-content class="profile-container">
+      <ion-row class="profile-name">{{profile.name}}</ion-row>
+      <ion-row class="profile-detail">{{profile.age}}{{profile.address}}</ion-row>
+      <ion-row class="profile-action">
+        <ion-row (click)="onClickShortList()">
+          <ion-text>
+            <ion-icon name="star-outline"></ion-icon> Shortlist
+          </ion-text>
+        </ion-row>
+        <ion-row class="profile-actions">
+          <ion-text>Like her?</ion-text>
+          <ion-button shape="round" (click)="onClickNotInterested()" class="profile-no">
+            <ion-icon name="close"></ion-icon>
+          </ion-button>
+          <ion-button shape="round" (click)="onClickInterested()" class="profile-yes">
+            <ion-icon name="checkmark"></ion-icon>
+          </ion-button>
+        </ion-row>
+      </ion-row>
+    </ion-card-content>
+  </ion-card>
+</ion-row>

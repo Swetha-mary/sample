@@ -1,0 +1,16 @@
+  <ion-card *ngFor="let profile of profileDetail;let i=index">
+    <ion-card-header class="profile-header"  [routerLink]="['/profile-detail']">
+      <ion-row>
+        <ion-img [src]="profile.image"></ion-img>
+      </ion-row>
+    </ion-card-header>
+    <ion-card-content class="profile-container">
+      <ion-row class="profile-name">{{profile.name}}</ion-row>
+      <ion-row calss="profile-detail">{{profile.age}}{{profile.address}}</ion-row>
+      <ion-row>
+        <ion-button shape="round" class="profile-yes"
+          [routerLink]="['/profile-detail']">Yes</ion-button>
+        <ion-button shape="round" class="profile-no">No</ion-button>
+      </ion-row>
+    </ion-card-content>
+  </ion-card>
