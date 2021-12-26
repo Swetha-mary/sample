@@ -15,6 +15,10 @@ const routes: Routes = [
     path: 'profile-detail',
     loadChildren: () => import('./page/profile-detail/profile-detail.module').then( m => m.ProfileDetailPageModule)
   },
+  {
+    path: 'tinder-like',
+    loadChildren: () => import('./tinder-like/tinder-like.module').then( m => m.TinderLikePageModule)
+  },
 ];
 
 @NgModule({

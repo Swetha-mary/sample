@@ -17,6 +17,12 @@
             <ion-label> Home </ion-label>
           </ion-item>
         </ion-menu-toggle>
+        <ion-menu-toggle auto-hide="false">
+          <ion-item button [routerLink]="['/tinder-like']" >
+            <ion-icon slot="start" name="tinder-like"></ion-icon>
+            <ion-label> recommendation profile </ion-label>
+          </ion-item>
+        </ion-menu-toggle>
       </ion-list>
     </ion-content>
   </ion-menu>

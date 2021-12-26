@@ -1,0 +1,26 @@
+<ion-row class="tinder" [hidden]="!cards.length">
+  <div class="tinder--cards" (pan)="handlePan($event)" (panend)="handlePanEnd($event)">
+    <div #tinderCard class="tinder--card" (transitionend)="handleShift()" *ngFor="let card of cards; let i = index"
+      [ngStyle]="{ zIndex: cards.length - i, transform: 'scale(' + (20 - i) / 20 + ') translateY(-' + 20 * i + 'px)' }">
+      <img #tinderCardImage [src]="card.img" (load)="tinderCardImage.style.opacity = 1">
+      <ion-row class="tinder-text">
+        <ion-text>{{ card.title }}</ion-text>
+        <ion-text>{{ card.description }}</ion-text>
+      </ion-row> 
+    </div>
+  </div>
+  <ion-row class="tinder--buttons">
+    <ion-row (click)="onClickShortList()">
+      <ion-text>
+        <ion-icon name="star-outline"></ion-icon>
+      </ion-text>
+    </ion-row>
+    <ion-text>Like her?</ion-text>
+    <ion-button shape="round" (click)="userClickedButton($event, true)" class="profile-no">
+      <ion-icon name="close"></ion-icon>
+    </ion-button>
+    <ion-button shape="round" (click)="userClickedButton($event, false)" class="profile-yes">
+      <ion-icon name="checkmark"></ion-icon>
+    </ion-button>
+  </ion-row>
+</ion-row>
